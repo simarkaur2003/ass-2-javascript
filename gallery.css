@@ -1,0 +1,46 @@
+/* Add this to gallery.css */
+
+/* Apply grayscale filter to inactive thumbnail images */
+#gallery ul li:not(.selected) img {
+    filter: grayscale(100%);
+  }
+  
+  /* Remove grayscale filter from the currently selected thumbnail image */
+  #gallery ul li.selected img {
+    filter: none;
+  }
+  /* Main Image */
+.main-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Thumbnail List */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  li {
+    margin: 10px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  li.selected {
+    filter: none;
+  }
+  
+  li img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+
+
