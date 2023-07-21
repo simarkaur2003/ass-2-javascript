@@ -1,45 +1,122 @@
-/* Add this to gallery.css */
+body {
+  font-family:monospace;
+  text-align: center;
+  background-color: #1a1a1a; /* Dark background color */
+  color: #f0f0f0; /* Light text color */
+  max-width: 1200px;
+}
 
-/* Apply grayscale filter to inactive thumbnail images */
+h1 {
+  font-size: xx-large;
+  margin: 1px;
+}
+
+img {
+  border: 2px solid red; /* Dark border color */
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+img:hover {
+  border: 2px solid red; /* Light border color */
+}
+#gallery {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row; /* Set images in a row */
+  justify-content: center; /* Center align images horizontally */
+  align-items: flex-start; /* Align images to the top */
+  flex-wrap: wrap; /* Wrap images to next line if exceeds container width */
+}
+
+
+div {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+figure {
+  margin-bottom: 20px;
+}
+
+
+#first-image {
+  max-width: 600px;
+  max-height: 350px;
+}
+
+#thumbnails-list img {
+  max-width: 160px;
+  max-height: 106.67px;
+  margin: 2%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img.inactive {
+  filter: grayscale(100%);
+}
+
+img.active {
+  filter: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+figcaption {
+  margin-top: 10px;
+}
+
 #gallery ul li:not(.selected) img {
-    filter: grayscale(100%);
-  }
-  
-  /* Remove grayscale filter from the currently selected thumbnail image */
-  #gallery ul li.selected img {
-    filter: none;
-  }
-  /* Main Image */
+  filter: grayscale(100%);
+}
+
+/* Remove grayscale filter from the currently selected thumbnail image */
+#gallery ul li.selected img {
+  filter: none;
+}
+/* Main Image */
 .main-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Thumbnail List */
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  li {
-    margin: 10px;
-    cursor: pointer;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-  }
-  
-  li.selected {
-    filter: none;
-  }
-  
-  li img {
-    max-width: 100%;
-    height: auto;
-  }
+  max-width: 100%;
+  height: auto;
+}
+
+/* Thumbnail List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  margin: 10px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+li.selected {
+  filter: none;
+}
+
+li img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
   
 
 
